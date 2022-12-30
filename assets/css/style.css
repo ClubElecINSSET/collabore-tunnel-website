@@ -1,0 +1,241 @@
+@font-face {
+    font-family: "Varela Round";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/varela-round-v19-latin-regular.eot");
+    src: local(""), url("../fonts/varela-round-v19-latin-regular.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/varela-round-v19-latin-regular.woff2") format("woff2"),
+        url("../fonts/varela-round-v19-latin-regular.woff") format("woff"),
+        url("../fonts/varela-round-v19-latin-regular.ttf") format("truetype"),
+        url("../fonts/varela-round-v19-latin-regular.svg#VarelaRound") format("svg");
+}
+
+body {
+    font-family: "Varela Round", sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    text-rendering: optimizeLegibility;
+    background-color: #e1e0e2;
+    color: #1e1f1d;
+    box-sizing: border-box;
+    animation: fadein 0.5s;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@keyframes fadein {
+    from {
+        margin-top: 20px;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    to {
+        opacity: 1;
+        overflow: hidden;
+    }
+}
+
+.top-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+    width: 180px;
+    transition: left .1s ease-in-out, opacity .1s ease-in-out;
+    z-index: 999;
+    opacity: .8;
+}
+
+.top-logo:hover {
+    opacity: 1;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+.elem {
+    padding: 16px;
+    box-shadow: 0 1px 2px #00000010, 0 8px 12px #00000020;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #d7d7d7;
+    margin-top: 8vh;
+}
+
+.header {
+    margin-bottom: 25px;
+}
+
+.header .title {
+    font-size: 2rem;
+    margin-bottom: 0;
+    margin-top: auto;
+}
+
+.header .desc {
+    font-size: small;
+}
+
+.content p {
+    hyphens: auto;
+    line-height: 1.8;
+    text-justify: ideographic;
+    margin-bottom: 1em;
+}
+
+.content code {
+    padding: .2em .4em;
+    font-size: 85%;
+    background-color: #e1e0e2;
+    border-radius: 6px;
+}
+
+.content pre {
+    padding: 16px;
+    overflow: auto;
+    border-radius: 10px;
+    background-color: #e1e0e2;
+}
+
+.content pre>code {
+    padding: 0;
+    font-size: 100%;
+    background-color: inherit;
+    border: 0;
+}
+
+a>svg {
+    fill: #1e1f1d99;
+    cursor: pointer;
+}
+
+a>svg:hover {
+    fill: #1e1f1d;
+}
+
+header a>svg:hover,
+footer a>svg:hover {
+    transform: scale(1.1);
+
+}
+
+@media screen and (max-width:600px) {
+    .content {
+        font-size: 16px;
+    }
+
+    .header .title {
+        font-size: 2rem;
+    }
+
+    .content p {
+        letter-spacing: .05em;
+    }
+}
+
+
+@media screen and (min-width: 32em) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+
+@media screen and (min-width: 64em) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+footer {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    align-content: center;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.footer-links {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    align-self: center;
+    flex: 1;
+    justify-content: center;
+}
+
+.footer-links a {
+    transition: color 0.1s ease-in-out;
+    color: #1e1f1d99;
+}
+
+.footer-links a:hover {
+    transition: color 0.1s ease-in-out;
+    color: #1e1f1d;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1e1f1d;
+        color: #e1e0e2;
+    }
+
+    .top-logo {
+        filter: invert(100%);
+    }
+
+    .logo {
+        filter: invert(100%);
+    }
+
+    .elem {
+        background-color: #282828;
+    }
+
+    .content a {
+        text-decoration: underline;
+        color: #e1e0e2;
+    }
+
+    .content code,
+    .content pre {
+        background-color: #1e1f1d !important;
+    }
+
+    .content blockquote {
+        background-color: #1e1f1d;
+        color: #e1e0e2;
+        border-left: .25em solid #e1e0e2;
+    }
+
+    .footer-links a {
+        transition: color 0.1s ease-in-out;
+        color: #e1e0e299;
+    }
+
+    .footer-links a:hover {
+        transition: color 0.1s ease-in-out;
+        color: #e1e0e2;
+    }
+
+    a>svg {
+        fill: #e1e0e299;
+    }
+
+    a>svg:hover {
+        fill: #e1e0e2;
+    }
+}
