@@ -15,7 +15,9 @@ body {
     line-height: 1.5;
     font-weight: 400;
     margin: 0;
-    padding: 0;
+    padding-top: 8vh;
+    padding-left: 5rem;
+    padding-right: 5rem;
     min-height: 100vh;
     text-rendering: optimizeLegibility;
     background-color: #e1e0e2;
@@ -41,29 +43,47 @@ body {
     }
 }
 
+.top-border {
+    position: absolute;
+    border-top: 6px solid #1e1f1d;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
 .top-logo {
     position: absolute;
     top: 0;
-    left: 0;
-    border: 0;
-    width: 180px;
-    transition: left .1s ease-in-out, opacity .1s ease-in-out;
-    z-index: 999;
-    opacity: .8;
+    left: 5rem;
+    height: 50px;
 }
 
-.top-logo:hover {
-    opacity: 1;
+.background-logo {
+    position: absolute;
+    bottom: 0;
+    right: 5rem;
+    height: 500px;
+    opacity: 0.1;
+    z-index: -9999;
+    margin-bottom: 35px;
+    display: none;
+}
+
+main {
+    position: relative;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
 }
 
 .container {
     display: flex;
     width: 100%;
     margin: auto;
-    padding-left: 16px;
-    padding-right: 16px;
 }
-
 
 .elem {
     padding: 16px;
@@ -71,7 +91,6 @@ body {
     border-radius: 12px;
     overflow: hidden;
     background-color: #d7d7d7;
-    margin-top: 8vh;
 }
 
 .header {
@@ -91,7 +110,6 @@ body {
 .content p {
     hyphens: auto;
     line-height: 1.8;
-    text-justify: ideographic;
     margin-bottom: 1em;
 }
 
@@ -132,6 +150,15 @@ footer a>svg:hover {
 }
 
 @media screen and (max-width:600px) {
+    body {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .top-logo {
+        left: 1rem;
+    }
+
     .content {
         font-size: 16px;
     }
@@ -157,6 +184,13 @@ footer a>svg:hover {
     .container {
         max-width: 1200px;
     }
+}
+
+@media screen and (min-width: 100em) {
+    .background-logo {
+        display: block;
+    }
+
 }
 
 footer {
@@ -193,7 +227,16 @@ footer a {
         color: #e1e0e2;
     }
 
+    .top-border {
+        border-top: 7px solid #e1e0e2;
+
+    }
+
     .top-logo {
+        filter: invert(100%);
+    }
+
+    .background-logo {
         filter: invert(100%);
     }
 
